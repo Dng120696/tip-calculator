@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+
+</head>
+<body>
+  <div class="logo">
+    <img src="./images/logo.svg" alt="logo">
+  </div>
+  <main class="container">
+    <section class="left-section">
+      <div class="input-bill">
+        <label for="bill">
+          Bill
+       </label>
+       <label class="error-message">Can't be zero</label>
+       <input type="number" name="number" id="bill"  placeholder="0">
+       
+       <img src="./images/icon-dollar.svg" alt="dollar" class="icon dollar">
+      </div>
+      <div class="select-tip">
+        <label for="tip">
+          Select Tip %
+        </label>
+        
+        <div class="button grid">
+          <input type="button" value="5%" class="btn">
+          <input type="button" value="10%" class="btn">
+          <input type="button" value="15%" class="btn active">
+          <input type="button" value="25%" class="btn">
+          <input type="button" value="50%" class="btn">
+          <input type="number" name="number" id="input-num" placeholder="Custom">
+        </div>
+      </div>
+      <div class="number-of-people">
+        <label for="num-people">
+          Number of People
+        </label>
+        <label class="error-message">Can't be zero</label>
+        <input type="number" name="number" id="num-people" placeholder="0" >
+        <img src="./images/icon-person.svg" alt="person" class="icon person">
+      </div>
+    </section>
+    <section class="right-section"> 
+      <!-- tip amount -->
+      <div class="flex">
+        <p class="tip-amount">
+          <span>
+            Tip Amount
+          </span>
+          <span>
+            / person
+          </span>
+        </p>
+        <p class="total tip">
+          $0.00
+        </p>
+      </div>
+  <!-- total ammount -->
+      <div class="flex">
+        <p class="total-amount">
+          <span>
+            Total
+          </span>
+          <span>
+            / person
+          </span>
+        </p>
+      <p class="total total-value">
+        $0.00
+      </p>
+    </div>
+      <form>
+        <button class="btn-reset" id="reset"> Reset
+      </form>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
