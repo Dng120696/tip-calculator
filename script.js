@@ -39,7 +39,7 @@ const calculateTotal = () =>{
   }else{
     peopleInput.parentElement.classList.remove('error');
     if(peopleValue >= 1){
-      if(!billinput.value){
+      if(!billinput.value ){
         return 0;
       }else{
         let tipPerPerson = (tipValue * billValue) / peopleValue;
@@ -107,6 +107,11 @@ btnReset.addEventListener('click',(e) =>{
     removeErrorFocus(billinput);
     removeErrorFocus(peopleInput);
     removeErrorFocus(customInput);
+
+    billValue = 0;
+    peopleValue = 0;
+    tipValue = 0.15;
+    
     billinput.value = '';
     peopleInput.value = '';
     customInput.value = '';
